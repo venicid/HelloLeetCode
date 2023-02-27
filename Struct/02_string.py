@@ -1,6 +1,7 @@
 """
 字符串
-    不能被修改，只能重新定义
+    不能被修改，只能读操作
+    写操作，只能重新定义
 """
 # 定义
 str1 = "hello world!"
@@ -11,6 +12,12 @@ for i in range(len(str1)):
 
 for item in str1:
     print(item, end=" ")  # h e l l o   w o r l d !
+
+# 指针法
+p1 = 0
+while p1 < len(str1):
+    print(str1[p1], end="")
+    p1 += 1
 
 """
 增删改查

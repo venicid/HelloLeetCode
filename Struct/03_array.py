@@ -1,5 +1,10 @@
 """
 数组array
+    相同类型，一组连续内存，顺序存储的
+扩容机制：
+    先为数组分配较小的内存
+    当数组容量不足时，需要重新分配更多的空间（通常是2倍）
+    把之前的数据复制到新的数组，旧的释放
 """
 
 # 定义
@@ -14,6 +19,11 @@ for item in arr:
 
 for index, val in enumerate(arr):  # [ɪˈnuːməreɪt]
     print(index, val, end=" ")
+
+p1 = 0
+while p1 < len(arr):
+    print(arr[p1])
+    p1 += 1
 
 """
 增删改查
